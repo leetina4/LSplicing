@@ -18,6 +18,7 @@
 #'
 #' @export
 
+#HI
 plotReads <- function(coor, r, gene, alns) {
   r <- r[r$geneId == gene, ]
 
