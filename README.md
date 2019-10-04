@@ -29,7 +29,9 @@ The author of this package is Tina Lee. The functions avaliable within this pack
 - readsCoverage
 - plotReads
 
-The first function countReads reads a list of GenomeAlignment object of the alignments and a list of GRanges objects containing the reference coordinates and would output two tables, one table containing count of exon combinations for each read and the other table containing exon coordinates of different genes. A helper combineTranscript is there for combining all transcript exons coordinates for target gene. Another function that is needed to plot a splicing graph is readsCoverage, which calculates the coverage of long-read RNAs. Finally, plotReads function, which takes in the results from countReads and readsCoverage and generates a splicing graph using R package, ggplot2. 
+The first function countReads reads the path of the file that store the alignments and the path of the file that store the reference coordinates. This function would output two tables, one table containing count of exon combinations for each read and the other table containing exon coordinates of different genes. A helper combineTranscript is there for combining all transcript exons coordinates for target gene. 
+
+A helper function that is needed to plot a splicing graph is readsCoverage, which calculates the coverage of long-read RNAs. This function is used in plotReads function. Finally, plotReads function, which takes in the results from countReads and readsCoverage and generates a splicing graph using R package, ggplot2. 
 
 
 
