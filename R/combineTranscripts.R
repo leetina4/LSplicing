@@ -1,12 +1,36 @@
-# combineTranscripts.R
+#' A helper for countReads function
+#'
+#' A function that helps combine all transcript exons coordinates
+#'
+#' @param gList A GRanges object that store new exon coordinates.
+#' @param dup A GRanges object of narrowed down reference coordinates of human genes. Only contain a target gene's protein coding exon.
+#' @param geneId A string of characters that stores the target Ensembl gene ID.
+#'
+#' @return A list of two GRanges ojects.
+#'
+#' @examples
+#' gRangesList <- GenomicRanges::GRanges()
+#' referencesFile<- system.file("extdata", "example_refCoord.gff3",
+#' package = "LSplicing")
+#' refCoord <- rtracklayer::import(referencesFile)
+#' gene <- "ENSG00000108788.11"
+#'
+#' \dontrun{
+#' combineTranscripts(gList = gRangesList,
+#'                    dup = refCoord,
+#'                    geneId = gene)
+#' }
+#' @export
+#' @import GenomicRanges
+#' @importFrom IRanges IRanges
 
-combineTranscripts <- function(gList, dup, geneId) {
+combineTranscripts <- function(gList, dup, geneId = "") {
   count <- 1
   start <- GenomicRanges::start(dup[1])
   end <- GenomicRanges::end(dup[1])
   newGranges <- GenomicRanges::GRanges()
   prev <- dup[1]
-
+  # create New range storing new exon coordinates
   for (i in 2:length(dup)) {
     if (i == length(dup)) {
       newGranges <- GenomicRanges::union(newGranges,

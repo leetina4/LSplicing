@@ -4,7 +4,7 @@
 \alias{combineTranscripts}
 \title{A helper for countReads function}
 \usage{
-combineTranscripts(gList, dup, geneId)
+combineTranscripts(gList, dup, geneId = "")
 }
 \arguments{
 \item{gList}{A GRanges object that store new exon coordinates.}
