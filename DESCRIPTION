@@ -6,9 +6,10 @@ Author: person("T", "Lee", email = "yijen.lee@mail.utoronto.ca", role = c("aut",
 Maintainer: T Lee <yijen.lee@mail.utoronto.ca>
 Description: Generates long-reads splicing graph using the results from Minimap2.
 License: MIT + file LICENSE
-Depends: R (>= 3.1.0)
+Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true
+biocViews:
 Imports: 
     GenomicRanges,
     GenomicAlignments,
@@ -17,7 +18,12 @@ Imports:
     ggplot2,
     readr,
     rtracklayer,
-    IRanges
+    IRanges,
+    shiny
 RoxygenNote: 6.1.1
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown,
+    devtools
+VignetteBuilder: knitr

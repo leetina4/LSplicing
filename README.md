@@ -28,10 +28,19 @@ The author of this package is Tina Lee. The functions avaliable within this pack
 - combineTranscripts
 - readsCoverage
 - plotReads
+- runLSplicingApp
 
 The first function countReads reads the path of the file that store the alignments and the path of the file that store the reference coordinates. This function would output two tables, one table containing count of exon combinations for each read and the other table containing exon coordinates of different genes. A helper combineTranscript is there for combining all transcript exons coordinates for target gene. 
 
 A helper function that is needed to plot a splicing graph is readsCoverage, which calculates the coverage of long-read RNAs. This function is used in plotReads function. Finally, plotReads function, which takes in the results from countReads and generates a splicing graph using R package, ggplot2. 
+
+A shiny page would be called using runLSplicingApp(). This shiny page will plot splicing graph using countReads and also code in plotReads.
+
+
+## Example output
+The following image is the shiny page of LSplicing R package. Each rectangular box represents correpsonding exon in target gene and the lines in betweens and the numbers above the boxes represents the differenct exon combinations. For instance, an arc between exon 1 and exon 3 would mean that this specific exon combination does not contain exon 2.
+
+![](./inst/extdata/example_output.png)
 
 
 

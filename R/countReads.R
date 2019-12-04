@@ -85,11 +85,6 @@ countReads <- function(alnsFile, referencesFile) {
 
   r <- list(gList, results)
 
-  # finish for loop
-  # output new exon coordinates and results of exon combinations
-  write.table(gList, file = "exon_coordinates.tsv", quote = FALSE, sep = "\t", col.names = NA)
-  write.table(results, file = "exon_table.tsv", quote = FALSE, sep = "\t", col.names = NA)
-
   return(r)
 }
 

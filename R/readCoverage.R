@@ -20,7 +20,6 @@
 #' readCoverage(coor = coor,
 #'              alns = alignments)
 #' }
-#' @export
 #' @import GenomicAlignments
 
 readCoverage <- function(coor, alns) {

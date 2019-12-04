@@ -20,7 +20,6 @@
 #'                    dup = refCoord,
 #'                    geneId = gene)
 #' }
-#' @export
 #' @import GenomicRanges
 #' @importFrom IRanges IRanges
 
