@@ -11,7 +11,7 @@
 #' @export
 
 runLSplicingApp <- function() {
-  appDir <- "/Users/tinalee/Documents/BCB410/LSplicing/inst/shiny-scripts/lsplicingApp/"
+  appDir <- system.file("shiny-scripts", "lsplicingApp", package = "LSplicing")
   shiny::runApp(appDir, display.mode = "normal")
   return(invisible(NULL))
 }
