@@ -9,7 +9,7 @@ library(ggplot2)
 library(GenomicAlignments)
 
 # Load data ----
-load("/Users/tinalee/Documents/BCB410/LSplicing/inst/extdata/testCountReads.RData")
+load(system.file("extdata", "testCountReads.RData", package = "LSplicing"))
 
 # Define UI ----
 myUi <- fluidPage(
